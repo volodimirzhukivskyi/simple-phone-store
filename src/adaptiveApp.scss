@@ -1,0 +1,206 @@
+@media (max-width: 900px) {
+  .register-form-container {
+    padding: 15px;
+  }
+  .form-title {
+    margin: 15px;
+    font-size: 25px;
+  }
+  .pic-products {
+    width: 80px;
+  }
+  .block-pic-slider {
+    margin-bottom: 35px
+  }
+  .text-order-block {
+    font-size: 20px;
+    padding: 15px  0;
+  }
+  .price-number {
+    font-size: 30px;
+  }
+  .price-text {
+    font-size: 40px;
+  }
+  /////PRODUCT/////
+  .wrapperContent{
+    flex-direction: column;
+  }
+  .filterForm {
+    width: inherit;}
+  .filterForm-button{
+    max-width: 250px;
+  }
+  .phonesWrapper{
+    justify-content: center;
+  }
+  .cardsWrapper{
+    width: 200px;
+  }
+}
+
+@media (max-width: 750px) {
+  /////Slider/////
+  .slider-img img {
+    max-width: 500px;
+    height: 300px
+
+  }
+  .buttonSliderNext {
+    padding: 0;
+  }
+  .buttonSliderPrev {
+    padding: 0;
+  }
+  .slider-img {
+    height: 300px;
+  }
+  .slider{
+    height: 300px;
+    padding: 0;
+  }
+  //////PRIORITY_PRODUCT//////
+  .block-products-card {
+    flex-direction: column;
+  }
+  .podInformation__wrapper {
+    display: flex;
+    width: 100%;
+  }
+  .pic-products {
+    width: 50px;
+    margin-bottom: 5px;
+  }
+  .block-products-text {
+    text-align: left;
+    max-width: 300px;
+  }
+  .products-title {
+    font-size: 20px;
+  }
+  .products-text {
+    font-size: 14px;
+  }
+  .color-block-container h2 {
+    font-size: 20px;
+  }
+  .podInformation__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+///////HERO_FORM////
+  .text-order-block{
+    font-size: 20px;
+    width: 85%;
+    padding:
+          30px 0
+  ;
+  }
+  .register-form-container{
+  align-self: center;
+  }
+  .hero-block__form{
+   width: inherit;
+   display: flex;
+   padding:
+          20px
+  ;
+  }
+  .price-information{
+    width: 90%;
+  }
+  /////HEADER////
+  .logo{
+    display: none;
+  }
+  .link-navigation {
+    margin-left: 15px;
+  }
+  //////LOGO/////
+
+
+  .titleHero {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .hero-navigation__list {
+    display: block;
+  }
+  .color-block-container h2{
+    display: none;
+  }
+  .products-title {
+    font-size: 15px;
+  }
+  .podInformation__content{
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  .podInformation__wrapper {
+    padding: 10px;
+  }
+  ///////PRIORITY_PRODUCT//////
+  .block-pic-slider{
+    display: flex;
+    flex-direction: column;
+  }
+  .block-pic {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-right: 20px;
+  }
+  .podInformation__wrapper{
+    flex-direction: column;
+  }
+  .active-pic {
+    max-width: 60%;
+  }
+.block-active-pic{
+  display: flex;
+  justify-content: center;
+}
+  ///////PRICE_BLOCK////
+  .hero-block__form {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .register-form-container {
+    max-width: 300px;
+  }
+  .text-order-block {
+    animation: none;
+    width: 100%;
+    text-align: center;
+  }
+  .price-information {
+    width: 100%;
+  }
+  //////////SLIDER///////////
+  .slider-img {
+    height: 200px;
+  }
+  .slider-img img {
+    max-width: 350px;
+    height: 200px;
+  }
+  .slider {
+    height: 200px;
+  }
+  ///////PRODUCTS///////
+  .style-title {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 15%;
+  }
+  .favCardsWrapper {
+    width: inherit;
+    padding: 10px;
+  }
+  .counterWrapper{
+    margin: 5px;
+  }
+}

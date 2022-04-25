@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Телефоны",
+    "pic": "/imagesGeneralList/categoriesImg/mobilePhones.jpg",
+    "price": "1000"
+  },
+  {
+    "name": "Товары для ухода за телом",
+    "pic": "/imagesGeneralList/categoriesImg/beautyProducts.jpg",
+    "price": "50"
+  },
+  {
+    "name": "Товары для поддержания чистоты",
+    "pic": "/imagesGeneralList/categoriesImg/cleaningProduct.jpg",
+    "price": "200"
+  }
+]
