@@ -9,9 +9,9 @@ const InformationProduct = (props) => {
     color: ["black", "red", "green"],
     txt: 'Экран (6.7", OLED (Super Retina XDR), 2778x1284) / Apple A14 Bionic / тройная основная камера: 12 Мп + 12 Мп + 12 Мп, фронтальная камера: 12 Мп / 128 ГБ встроенной памяти / 3G / LTE / 5G / GPS / Nano-SIM / iOS 14',
     img: [
-      "/imagesGeneralList/phones/iphone12/iphone12.jpg",
-      "/imagesGeneralList/phones/iphone12/iphone12.3.jpg",
-      "/imagesGeneralList/phones/iphone12/iphone12.4.jpg",
+      "simple-phone-store/phones/iphone12/iphone12.jpg",
+      "simple-phone-store/phones/iphone12/iphone12.3.jpg",
+      "simple-phone-store/phones/iphone12/iphone12.4.jpg",
     ],
   };
 

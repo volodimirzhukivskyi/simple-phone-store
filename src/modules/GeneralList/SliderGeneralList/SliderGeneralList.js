@@ -4,17 +4,17 @@ import Button from "../../Button/Button";
 const img = [
   <img
     key={1}
-    src="/imagesGeneralList/sliderImg/informationBanner.png"
+    src="simple-phone-store/img/sliderImg/informationBanner.png"
     alt="картинки магазина "
   />,
   <img
     key={2}
-    src="/imagesGeneralList/sliderImg/youngWoman.jpg"
+    src="simple-phone-store/img/sliderImg/youngWoman.jpg"
     alt="картинки магазина "
   />,
   <img
     key={3}
-    src="/imagesGeneralList/sliderImg/Shop.jpg "
+    src="simple-phone-store/img/sliderImg/Shop.jpg "
     alt="картинки магазина "
   />,
 ];

@@ -17,8 +17,7 @@ const App = () => {
     error: store.reducerApp.error,
   }));
   useEffect(() => {
-    dispatch(loadUser());
-    dispatch(loadCategories("./categoryProducts.json"));
+    dispatch(loadUser("simple-phone-store/products.json"));
   }, []);
   const itemsCart = cards
     .filter((product) => {

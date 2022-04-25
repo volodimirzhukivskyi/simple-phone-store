@@ -4,10 +4,10 @@ import {
   isLoading,
 } from "./AppReducer/actionsApp";
 
-const loadUser = () => {
+const loadUser = (url) => {
   return (dispatch) => {
     dispatch(isLoading(true));
-    fetch("./products.json")
+    fetch(url)
       .then((res) => {
         if (res.ok) {
           return res.json();

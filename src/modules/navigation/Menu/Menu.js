@@ -14,7 +14,7 @@ const Menu = (props) => {
             <>
               <ReactSVG
                 className="img-logo"
-                src="./phones/smartphone_79223.svg"
+                src="simple-phone-store/phones/smartphone_79223.svg"
               />
 
               <h3 className="logo">Моби лайф</h3>
@@ -48,7 +48,7 @@ const Menu = (props) => {
           text={
             <ReactSVG
               className={itemsCart.length ? "img-shop--red" : "img-shop"}
-              src="./phones/shoppingcart3_114877.svg"
+              src="simple-phone-store/phones/shoppingcart3_114877.svg"
             />
           }
         />

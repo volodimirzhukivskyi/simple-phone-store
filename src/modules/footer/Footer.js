@@ -9,14 +9,14 @@ const Footer = () => {
       <div className="footer-wrapper--icon ">
         <a href="#">
           <div className="footer-wrapper--icon__wi-fi circle-icon">
-            <img src="/imagesGeneralList/smallPicImg/wi-fi.png" alt="Wi-fi" />
+            <img src="simple-phone-store/img/smallPicImg/wi-fi.png" alt="Wi-fi" />
           </div>
         </a>
 
         <a href="#">
           <div className="footer-wrapper--icon__facebook circle-icon">
             <img
-              src="/imagesGeneralList/smallPicImg/facebook-icon.png"
+              src="simple-phone-store/img/smallPicImg/facebook-icon.png"
               alt="facebook"
             />
           </div>
@@ -24,7 +24,7 @@ const Footer = () => {
         <a href="#">
           <div className="footer-wrapper--icon__dribbble circle-icon">
             <img
-              src="/imagesGeneralList/smallPicImg/dribbble-icon.png"
+              src="simple-phone-store/img/smallPicImg/dribbble-icon.png"
               alt="dribbble"
             />
           </div>
@@ -33,7 +33,7 @@ const Footer = () => {
         <a href="#">
           <div className="footer-wrapper--icon__pinterest circle-icon">
             <img
-              src="/imagesGeneralList/smallPicImg/pinterest-icon.png"
+              src="simple-phone-store/img/smallPicImg/pinterest-icon.png"
               alt="pinterest"
             />
           </div>
