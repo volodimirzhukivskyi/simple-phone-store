@@ -11,7 +11,7 @@ const GeneralList = (props) => {
           МЫ РАДЫ ПРИВЕТСТВОВАТЬ ВАС В НАШЕМ ИНТЕРНЕТ-МАГАЗИНЕ!
         </h1>
         <Slider />
-        <InformationProduct showcaseSample={showcaseSample} />
+        <InformationProduct  />
 
     </div>
   );

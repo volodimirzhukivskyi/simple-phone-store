@@ -1,9 +1,14 @@
 import React from "react";
-import Tab from "../Tab/Tab";
 import { ReactSVG } from "react-svg";
+import Tab from "../Tab/Tab";
 
 const Menu = (props) => {
   const { itemsCart } = props;
+  const navigation = [
+    { id: 1, title: "Главная", path: "/" },
+    { id: 2, title: "Товары", path: "/phone" },
+    { id: 3, title: "Избранное", path: "/fav" },
+  ];
   return (
     <header className="head">
       <div className="head-wrapper container">
@@ -14,7 +19,7 @@ const Menu = (props) => {
             <>
               <ReactSVG
                 className="img-logo"
-                src="simple-phone-store/phones/smartphone_79223.svg"
+                src="simple-phone-store/img/phones/smartphone_79223.svg"
               />
 
               <h3 className="logo">Моби лайф</h3>
@@ -24,23 +29,11 @@ const Menu = (props) => {
 
         <nav className="hero-navigation">
           <ul className="hero-navigation__list">
-            <li className="list-item">
-              <Tab elUrlNav="/" text={"Главная"} className="link-navigation" />
-            </li>
-            <li className="list-item">
-              <Tab
-                elUrlNav="/phone"
-                text={"Товары"}
-                className="link-navigation"
-              />
-            </li>
-            <li className="list-item">
-              <Tab
-                elUrlNav="/fav"
-                text={"Избранное"}
-                className="link-navigation"
-              />
-            </li>
+            {navigation.map(({ id, title, path }) => (
+              <li key={id} className="list-item">
+                <Tab elUrlNav={path} text={title} className="link-navigation" />
+              </li>
+            ))}
           </ul>
         </nav>
         <Tab
@@ -48,7 +41,7 @@ const Menu = (props) => {
           text={
             <ReactSVG
               className={itemsCart.length ? "img-shop--red" : "img-shop"}
-              src="simple-phone-store/phones/shoppingcart3_114877.svg"
+              src="simple-phone-store/img/phones/shoppingcart3_114877.svg"
             />
           }
         />

@@ -3,11 +3,11 @@
   {
     "name": "iPhone 12",
     "price": "28399",
-    "src": "simple-phone-store/img/phones/iphone12/iphone12.jpg",
+    "src": "simple-phone-store/img/iphone_12/iphone_12.jpg",
     "vendorCode": "2",
-    "color": "Black",
+    "color": ["black", "red", "green"],
     "txt": "Экран (6.7\", OLED (Super Retina XDR), 2778x1284) / Apple A14 Bionic / тройная основная камера: 12 Мп + 12 Мп + 12 Мп, фронтальная камера: 12 Мп / 128 ГБ встроенной памяти / 3G / LTE / 5G / GPS / Nano-SIM / iOS 14",
-    "img": ["/phones/iphone 12/iphone12.2jpg","/phones/iphone 12/iphone12.3jpg","/phones/iphone 12/iphone12.4jpg"]
+    "img": ["simple-phone-store/img/iphone_12/iphone_12.jpg", "simple-phone-store/img/iphone_12/iphone_12_3.jpg","simple-phone-store/img/iphone_12/iphone_12_4.jpg"]
   },
   {
     "name": "Nokia 3.4",

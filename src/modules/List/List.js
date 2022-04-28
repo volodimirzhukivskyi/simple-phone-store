@@ -53,14 +53,6 @@ const List = (props) => {
           path="/"
           render={() => (
             <GeneralList
-              showcaseSample={cards
-                .filter((product) => product.name === "iPhone 12")
-                .map((filterProduct) => {
-                  return {
-                    ...filterProduct,
-                    count: 1,
-                  };
-                })}
             />
           )}
         />

@@ -9,7 +9,6 @@ import {
   DELETE_FROM_SHOPPING,
   CLEAR_ITEM,
   PRICE_CALCULATOR,
-  ADD_CATEGORIES_SUCCESS,
 } from "./actionsApp";
 
 const INITIAL_STATE = {
@@ -33,12 +32,7 @@ export const reducerApp = (store = INITIAL_STATE, action) => {
         error: null,
         cards: [...action.payload],
       };
-    case ADD_CATEGORIES_SUCCESS:
-      return {
-        ...store,
-        error: null,
-        category: [...action.payload],
-      };
+
     case ADD_PRODUCT_FAILURE:
       return {
         ...store,

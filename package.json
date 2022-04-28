@@ -27,7 +27,7 @@
     "yup": "^0.32.9"
   },
   "scripts": {
-    "start": "set PORT=9000 &&react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "heroku-postbuild": "npm run build",
     "test": "react-scripts test",

@@ -6,7 +6,6 @@ import "./App.scss";
 import './adaptiveApp.scss'
 import loadUser from "./modules/ReduxApp/FetchUser";
 import List from "./modules/List/List";
-import loadCategories from "./modules/ReduxApp/FetchCategories";
 import Footer from "./modules/footer/Footer";
 const App = () => {
   const dispatch = useDispatch();
