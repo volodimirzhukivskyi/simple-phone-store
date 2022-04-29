@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Menu from "./modules/navigation/Menu/Menu.js";
 import "./App.scss";
-import './adaptiveApp.scss'
+import "./adaptiveApp.scss";
 import loadUser from "./modules/ReduxApp/FetchUser";
 import List from "./modules/List/List";
 import Footer from "./modules/footer/Footer";
@@ -16,7 +16,7 @@ const App = () => {
     error: store.reducerApp.error,
   }));
   useEffect(() => {
-    dispatch(loadUser("simple-phone-store/products.json"));
+    dispatch(loadUser("/simple-phone-store/products.json"));
   }, []);
   const itemsCart = cards
     .filter((product) => {
@@ -48,7 +48,7 @@ const App = () => {
           </div>
         </div>
       )}
-      {!isLoading &&cards.length&& (
+      {!isLoading && cards.length && (
         <React.Fragment>
           <List /> <Footer />
         </React.Fragment>

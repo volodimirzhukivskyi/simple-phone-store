@@ -50,15 +50,12 @@ const List = (props) => {
       <Switch>
         <Route
           exact
-          path="/"
-          render={() => (
-            <GeneralList
-            />
-          )}
+          path="/simple-phone-store/"
+          render={() => <GeneralList />}
         />
         <Route
           exact
-          path="/phone"
+          path="/simple-phone-store/phone"
           render={() => (
             <CardProductList
               cards={cards.map(mapCarWithFavorites)}
@@ -76,7 +73,7 @@ const List = (props) => {
           )}
         />
         <Route
-          path="/fav"
+          path="/simple-phone-store/fav"
           render={() => (
             <FavShopList
               cards={cards
@@ -98,7 +95,7 @@ const List = (props) => {
           )}
         />
         <Route
-          path="/shopping"
+          path="/simple-phone-store/shopping"
           render={() => (
             <FavShopList
               cards={cards

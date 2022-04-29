@@ -1,4 +1,10 @@
 const Footer = () => {
+  const socials = [
+    { id: 1, path: "https://youtube.com/", icon: "youtube" },
+    { id: 2, icon: "linkedin", path: "https://linkedin.com/in/" },
+    { id: 3, icon: "twitter", path: "https://twitter.com/" },
+    { id: 4, icon: "instagram", path: "https://instagram.com/" },
+  ];
   return (
     <footer className="footer">
       <h2 className="footer-title">- свяжитесь с нами -</h2>
@@ -6,39 +12,15 @@ const Footer = () => {
         Оставляйте ваши контакты и мы с вами свяжемся . Call center работает
         каждый день с 9:00-20:00. Ждем вас!!!{" "}
       </p>
-      <div className="footer-wrapper--icon ">
-        <a href="#">
-          <div className="footer-wrapper--icon__wi-fi circle-icon">
-            <img src="simple-phone-store/img/smallPicImg/wi-fi.png" alt="Wi-fi" />
-          </div>
-        </a>
-
-        <a href="#">
-          <div className="footer-wrapper--icon__facebook circle-icon">
-            <img
-              src="simple-phone-store/img/smallPicImg/facebook-icon.png"
-              alt="facebook"
-            />
-          </div>
-        </a>
-        <a href="#">
-          <div className="footer-wrapper--icon__dribbble circle-icon">
-            <img
-              src="simple-phone-store/img/smallPicImg/dribbble-icon.png"
-              alt="dribbble"
-            />
-          </div>
-        </a>
-
-        <a href="#">
-          <div className="footer-wrapper--icon__pinterest circle-icon">
-            <img
-              src="simple-phone-store/img/smallPicImg/pinterest-icon.png"
-              alt="pinterest"
-            />
-          </div>
-        </a>
-      </div>
+      <ul className="footer-wrapper--icon ">
+        {socials.map(({ id, icon, path }) => (
+          <li key={id}>
+            <a href={path} target="_blank" rel="noopener noreferrer">
+              <i className={`fab fa-solid fa-${icon}`} aria-hidden="true" />
+            </a>
+          </li>
+        ))}
+      </ul>
       <div className="footer-contact">
         <p className="footer-concat__address ">
           {" "}

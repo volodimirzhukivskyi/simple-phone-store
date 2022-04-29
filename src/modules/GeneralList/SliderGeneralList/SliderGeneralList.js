@@ -4,19 +4,11 @@ import Button from "../../Button/Button";
 const img = [
   <img
     key={1}
-    src="simple-phone-store/img/sliderImg/informationBanner.png"
+    src="img/sliderImg/informationBanner.png"
     alt="картинки магазина "
   />,
-  <img
-    key={2}
-    src="simple-phone-store/img/sliderImg/youngWoman.jpg"
-    alt="картинки магазина "
-  />,
-  <img
-    key={3}
-    src="simple-phone-store/img/sliderImg/Shop.jpg "
-    alt="картинки магазина "
-  />,
+  <img key={2} src="img/sliderImg/youngWoman.jpg" alt="картинки магазина " />,
+  <img key={3} src="img/sliderImg/Shop.jpg " alt="картинки магазина " />,
 ];
 
 const Slider = () => {
@@ -26,7 +18,7 @@ const Slider = () => {
       setActiveIndex((current) => {
         return current === img.length - 1 ? 0 : current + 1;
       });
-    }, 40000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
   const prevIndexEl = activeIndex ? activeIndex - 1 : img.length - 1;

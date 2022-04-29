@@ -3,72 +3,72 @@
   {
     "name": "iPhone 12",
     "price": "28399",
-    "src": "simple-phone-store/img/iphone_12/iphone_12.jpg",
+    "src": "img/iphone_12/iphone_12.jpg",
     "vendorCode": "2",
     "color": ["black", "red", "green"],
     "txt": "Экран (6.7\", OLED (Super Retina XDR), 2778x1284) / Apple A14 Bionic / тройная основная камера: 12 Мп + 12 Мп + 12 Мп, фронтальная камера: 12 Мп / 128 ГБ встроенной памяти / 3G / LTE / 5G / GPS / Nano-SIM / iOS 14",
-    "img": ["simple-phone-store/img/iphone_12/iphone_12.jpg", "simple-phone-store/img/iphone_12/iphone_12_3.jpg","simple-phone-store/img/iphone_12/iphone_12_4.jpg"]
+    "img": ["img/iphone_12/iphone_12.jpg", "img/iphone_12/iphone_12_3.jpg","img/iphone_12/iphone_12_4.jpg"]
   },
   {
     "name": "Nokia 3.4",
     "price": "3499",
-    "src": "simple-phone-store/img/phones/nokia_3.png",
+    "src": "img/phones/nokia_3.png",
     "vendorCode": "3",
     "color": "Gray"
   },
   {
     "name": "Realme 7 Pro",
     "price": "8999",
-    "src": "simple-phone-store/img/phones/copy_realme_7_pro_6.jpg",
+    "src": "img/phones/copy_realme_7_pro_6.jpg",
     "vendorCode": "4",
     "color": "silver"
   },
   {
     "name": "Samsung Galaxy S10 Plus",
     "price": "16999",
-    "src": "simple-phone-store/img/phones/samsung_sm_big.jpg",
+    "src": "img/phones/samsung_sm_big.jpg",
     "vendorCode": "5",
     "color": "Black"
   },
   {
     "name": "Xiaomi Redmi 9A",
     "price": "2899",
-    "src": "simple-phone-store/img/phones/Xiaomi Redmi  9a.jpg",
+    "src": "img/phones/Xiaomi Redmi  9a.jpg",
     "vendorCode": "6",
     "color": "Black"
   },
   {
     "name": "Xiaomi Redmi Note 9",
     "price": "4999",
-    "src": "simple-phone-store/img/phones/Xiaomi Redmi Note9 .jpg",
+    "src": "img/phones/Xiaomi Redmi Note9 .jpg",
     "vendorCode": "7",
     "color": "Green"
   },
   {
     "name": "Samsung Galaxy A02s",
     "price": "3799",
-    "src": "simple-phone-store/img/phones/samsung_sm_.jpg",
+    "src": "img/phones/samsung_sm_.jpg",
     "vendorCode": "8",
     "color": "White"
   },
   {
     "name": "Xiaomi Redmi 9C",
     "price": "3499",
-    "src": "simple-phone-store/img/phones/Xiaomi Redmi 9C.jpg",
+    "src": "img/phones/Xiaomi Redmi 9C.jpg",
     "vendorCode": "9",
     "color": "grey"
   },
   {
     "name": "Xiaomi Redmi 8A",
     "price": "3199",
-    "src": "simple-phone-store/img/phones/xiaomi_redmi_8a.jpg",
+    "src": "img/phones/xiaomi_redmi_8a.jpg",
     "vendorCode": "10",
     "color": " Blue"
   },
   {
     "name": "Apple iPhone 12 Pro Max",
     "price": "40999",
-    "src": "simple-phone-store/img/phones/apple_iphone_12_pro_max.jpg",
+    "src": "img/phones/apple_iphone_12_pro_max.jpg",
     "vendorCode": "11",
     "color": "Silver"
   }

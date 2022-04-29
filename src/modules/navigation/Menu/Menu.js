@@ -5,21 +5,21 @@ import Tab from "../Tab/Tab";
 const Menu = (props) => {
   const { itemsCart } = props;
   const navigation = [
-    { id: 1, title: "Главная", path: "/" },
-    { id: 2, title: "Товары", path: "/phone" },
-    { id: 3, title: "Избранное", path: "/fav" },
+    { id: 1, title: "Главная", path: "/simple-phone-store/" },
+    { id: 2, title: "Товары", path: "/simple-phone-store/phone" },
+    { id: 3, title: "Избранное", path: "/simple-phone-store/fav" },
   ];
   return (
     <header className="head">
       <div className="head-wrapper container">
         <Tab
           className={"block-logo"}
-          elUrlNav="/"
+          elUrlNav="/simple-phone-store/"
           text={
             <>
               <ReactSVG
                 className="img-logo"
-                src="simple-phone-store/img/phones/smartphone_79223.svg"
+                src="img/phones/smartphone_79223.svg"
               />
 
               <h3 className="logo">Моби лайф</h3>
@@ -37,11 +37,11 @@ const Menu = (props) => {
           </ul>
         </nav>
         <Tab
-          elUrlNav="/shopping"
+          elUrlNav="/simple-phone-store/shopping"
           text={
             <ReactSVG
               className={itemsCart.length ? "img-shop--red" : "img-shop"}
-              src="simple-phone-store/img/phones/shoppingcart3_114877.svg"
+              src="img/phones/shoppingcart3_114877.svg"
             />
           }
         />
