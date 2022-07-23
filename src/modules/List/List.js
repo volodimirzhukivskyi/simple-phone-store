@@ -8,8 +8,8 @@ import {
 import React from "react";
 import GeneralList from "../GeneralList/GeneralList";
 import { useDispatch, useSelector } from "react-redux";
-import Modal from "../Modal/Modal";
-import Button from "../Button/Button";
+import Modal from "../../components/Modal/Modal";
+import Button from "../../components/Button/Button";
 import CardProductList from "../CardProductList/CardProductList";
 import FavShopList from "../FavShopList/FavShopList";
 
@@ -50,12 +50,12 @@ const List = (props) => {
       <Switch>
         <Route
           exact
-          path="/simple-phone-store/"
+          path={`${process.env.PUBLIC_URL}/`}
           render={() => <GeneralList />}
         />
         <Route
           exact
-          path="/simple-phone-store/phone"
+          path={`${process.env.PUBLIC_URL}/phone`}
           render={() => (
             <CardProductList
               cards={cards.map(mapCarWithFavorites)}
@@ -73,7 +73,7 @@ const List = (props) => {
           )}
         />
         <Route
-          path="/simple-phone-store/fav"
+          path={`${process.env.PUBLIC_URL}/fav`}
           render={() => (
             <FavShopList
               cards={cards
@@ -95,7 +95,7 @@ const List = (props) => {
           )}
         />
         <Route
-          path="/simple-phone-store/shopping"
+          path={`${process.env.PUBLIC_URL}/shopping`}
           render={() => (
             <FavShopList
               cards={cards
@@ -167,5 +167,4 @@ const List = (props) => {
     </main>
   );
 };
-//
 export default List;

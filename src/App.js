@@ -1,12 +1,12 @@
 import React from "react";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import Menu from "./modules/navigation/Menu/Menu.js";
+import Menu from "./modules/Menu/Menu.js";
 import "./App.scss";
 import "./adaptiveApp.scss";
 import loadUser from "./modules/ReduxApp/FetchUser";
 import List from "./modules/List/List";
-import Footer from "./modules/footer/Footer";
+import Footer from "./modules/Footer/Footer";
 const App = () => {
   const dispatch = useDispatch();
   const { isLoading, error, cards, shoppingCart } = useSelector((store) => ({
@@ -16,7 +16,7 @@ const App = () => {
     error: store.reducerApp.error,
   }));
   useEffect(() => {
-    dispatch(loadUser("/simple-phone-store/products.json"));
+    dispatch(loadUser(`${process.env.PUBLIC_URL}/products.json`));
   }, []);
   const itemsCart = cards
     .filter((product) => {

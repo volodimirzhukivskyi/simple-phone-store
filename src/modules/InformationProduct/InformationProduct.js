@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import FormShop from "../../FormShop/FormShop";
+import FormShop from "../../components/FormShop/FormShop";
 import { useSelector } from "react-redux";
-import ShowMore from "../../showMore/showMore";
+import ShowMore from "../../components/showMore/showMore";
 
 const InformationProduct = () => {
   const { cards } = useSelector((store) => ({
@@ -18,7 +18,6 @@ const InformationProduct = () => {
 
   const { color, txt, img, price, name } = showcaseSample[0];
   const [activeNumber, setActiveNumber] = useState(0);
-  console.log(img);
   const handleChange = (event) => {
     const elIndex = Number(event.target.attributes.value.value);
     setActiveNumber({ clickEl: img[elIndex] });
@@ -55,7 +54,7 @@ const InformationProduct = () => {
           className="pic-products"
           value={i}
           key={i}
-          src={`${imageSrc}`}
+          src={process.env.PUBLIC_URL+imageSrc}
           onClick={handleChange}
           alt="телефон"
         />
@@ -74,8 +73,8 @@ const InformationProduct = () => {
                 className="active-pic"
                 src={
                   activeNumber.clickEl
-                    ? activeNumber.clickEl
-                    : img[activeNumber]
+                    ? process.env.PUBLIC_URL+activeNumber.clickEl
+                    : process.env.PUBLIC_URL+img[activeNumber]
                 }
                 onChange={handleChange}
                 alt="телефон"

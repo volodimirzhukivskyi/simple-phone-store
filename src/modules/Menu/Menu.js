@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactSVG } from "react-svg";
-import Tab from "../Tab/Tab";
+import Tab from "../../components/Tab/Tab";
 
 const Menu = (props) => {
   const { itemsCart } = props;

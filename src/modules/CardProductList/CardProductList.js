@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import CardProduct from "./CardProduct/CardProduct";
-import FilterForm from "../FilterForm/FilterForm";
+import CardProduct from "../../components/CardProduct/CardProduct";
+import FilterForm from "../../components/FilterForm/FilterForm";
 
 const CardProductList = (props) => {
   const [filter, setFilter] = useState(false);

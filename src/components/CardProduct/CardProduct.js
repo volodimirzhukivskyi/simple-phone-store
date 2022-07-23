@@ -2,8 +2,8 @@ import React from "react";
 import { ReactSVG } from "react-svg";
 
 import PropTypes from "prop-types";
-import Star from "../../starSVG/Star";
-import Button from "../../Button/Button";
+import Star from "../starSVG/Star";
+import Button from "../Button/Button";
 
 const CardProduct = (props) => {
   const { mapActions, onClickAddToCart, card, splitValue } = props;
@@ -11,8 +11,8 @@ const CardProduct = (props) => {
     <div className="cardsWrapper">
       <img
         className="cardsWrapper__img"
-        onClick={() => console.log("yes")}
-        src={card.src}
+        onClick={() =>{}}
+        src={process.env.PUBLIC_URL+card.src}
         alt={""}
       />
       <div className="elementsWrapper">
@@ -54,6 +54,7 @@ const CardProduct = (props) => {
           }}
         />
       </div>
+      <p className={"cardsWrapper__hide-block"}>{card.txt}</p>
     </div>
   );
 };

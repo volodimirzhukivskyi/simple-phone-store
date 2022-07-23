@@ -1,18 +1,15 @@
 import "../../App.scss";
-import Slider from "./SliderGeneralList/SliderGeneralList";
-import InformationProduct from "../CardProductList/InformationProduct/InformationProduct";
+import Slider from "../../components/Slider/SliderGeneralList";
+import InformationProduct from "../InformationProduct/InformationProduct";
 
-const GeneralList = (props) => {
-  const { showcaseSample } = props;
-  console.log(showcaseSample)
+const GeneralList = () => {
   return (
     <div>
-        <h1 className={'titleHero'}>
-          МЫ РАДЫ ПРИВЕТСТВОВАТЬ ВАС В НАШЕМ ИНТЕРНЕТ-МАГАЗИНЕ!
-        </h1>
-        <Slider />
-        <InformationProduct  />
-
+      <h1 className={"titleHero"}>
+        МЫ РАДЫ ПРИВЕТСТВОВАТЬ ВАС В НАШЕМ ИНТЕРНЕТ-МАГАЗИНЕ!
+      </h1>
+      <Slider />
+      <InformationProduct />
     </div>
   );
 };

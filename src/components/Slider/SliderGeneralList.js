@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 
-import Button from "../../Button/Button";
+import Button from "../Button/Button";
 const img = [
   <img
     key={1}
-    src="img/sliderImg/informationBanner.png"
+    src={`${process.env.PUBLIC_URL}/img/sliderImg/informationBanner.png`}
     alt="картинки магазина "
   />,
-  <img key={2} src="img/sliderImg/youngWoman.jpg" alt="картинки магазина " />,
-  <img key={3} src="img/sliderImg/Shop.jpg " alt="картинки магазина " />,
+  <img key={2} src={`${process.env.PUBLIC_URL}/img/sliderImg/youngWoman.jpg`} alt="картинки магазина " />,
+  <img key={3} src={`${process.env.PUBLIC_URL}/img/sliderImg/Shop.jpg`} alt="картинки магазина " />,
 ];
 
 const Slider = () => {

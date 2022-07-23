@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "../../Button/Button";
+import Button from "../Button/Button";
 import { useDispatch } from "react-redux";
-import { addShopForm } from "../../ReduxApp/ModalReducer/modalAction";
-import Counter from "../../Counter/Counter";
+import { addShopForm } from "../../modules/ReduxApp/ModalReducer/modalAction";
+import Counter from "../Counter/Counter";
 
 const FavShopCards = (props) => {
   const {
@@ -21,7 +21,7 @@ const FavShopCards = (props) => {
       className="favCardsBlock"
       style={{ borderBottom: "1px solid #cccccc" }}
     >
-      <img src={card.src} alt="Смартфон" />
+      <img src={process.env.PUBLIC_URL+card.src} alt="Смартфон" />
       <div className="contentTextWrapper">
         <p className="cardsWrapper__title">
           Модель : <br />

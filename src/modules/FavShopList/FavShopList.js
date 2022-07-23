@@ -1,14 +1,14 @@
 import React from "react";
-import FavShopCards from "./FavShopCards/FavShopCards";
+import FavShopCards from "../../components/FavShopCards/FavShopCards";
 import { changedCountItem } from "../ReduxApp/AppReducer/actionsApp";
 import {
   addShopForm,
   addShopModal,
 } from "../ReduxApp/ModalReducer/modalAction";
 import { useDispatch, useSelector } from "react-redux";
-import Modal from "../Modal/Modal";
-import Button from "../Button/Button";
-import FormShop from "../FormShop/FormShop";
+import Modal from "../../components/Modal/Modal";
+import Button from "../../components/Button/Button";
+import FormShop from "../../components/FormShop/FormShop";
 
 const FavShopList = (props) => {
   const {

@@ -1,11 +1,11 @@
 import React from "react";
 import { Formik } from "formik";
 import * as yup from "yup";
-import { clearItem } from "../ReduxApp/AppReducer/actionsApp";
+import { clearItem } from "../../modules/ReduxApp/AppReducer/actionsApp";
 import {
   addShopForm,
   addShopModal,
-} from "../ReduxApp/ModalReducer/modalAction";
+} from "../../modules/ReduxApp/ModalReducer/modalAction";
 import { useDispatch } from "react-redux";
 const FormShop = (props) => {
   const { click, card } = props;
@@ -35,7 +35,7 @@ const FormShop = (props) => {
       .required("Обязательно"),
   });
   return (
-    <React.Fragment>
+    <>
       <Formik
         initialValues={{
           name: "",
@@ -87,7 +87,7 @@ const FormShop = (props) => {
             className="register-form-container"
             onClick={(e) => e.stopPropagation()}
           >
-            <form action="">
+            <form action="src/components/FormShop/FormShop">
               <h1 className="form-title">Сделать заказ</h1>
               <div className="form-fields">
                 <div className="form-field">
@@ -175,10 +175,9 @@ const FormShop = (props) => {
               </div>
             </form>
           </div>
-          // </div>
         )}
       </Formik>
-    </React.Fragment>
+    </>
   );
 };
 export default FormShop;
