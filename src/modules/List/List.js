@@ -48,14 +48,10 @@ const List = (props) => {
   return (
     <main className={"container"}>
       <Switch>
-        <Route
-          exact
-          path={`${process.env.PUBLIC_URL}/`}
-          render={() => <GeneralList />}
-        />
+        <Route exact path={"/"} render={() => <GeneralList />} />
 
         <Route
-          path={`${process.env.PUBLIC_URL}/phone`}
+          path={"/phone"}
           render={() => (
             <CardProductList
               cards={cards.map(mapCarWithFavorites)}
@@ -74,7 +70,7 @@ const List = (props) => {
         />
 
         <Route
-          path={`${process.env.PUBLIC_URL}/fav`}
+          path={"/fav"}
           render={() => (
             <FavShopList
               cards={cards
@@ -97,7 +93,7 @@ const List = (props) => {
         />
 
         <Route
-          path={`${process.env.PUBLIC_URL}/shopping`}
+          path={"/shopping"}
           render={() => (
             <FavShopList
               cards={cards

@@ -5,16 +5,15 @@ import Tab from "../../components/Tab/Tab";
 const Menu = (props) => {
   const { itemsCart } = props;
   const navigation = [
-    { id: 1, title: "Главная", path: `${process.env.PUBLIC_URL}/` },
-    { id: 2, title: "Товары", path: `${process.env.PUBLIC_URL}/phone` },
-    { id: 3, title: "Избранное", path: `${process.env.PUBLIC_URL}/fav` },
+    { id: 2, title: "Товары", path: "/phone" },
+    { id: 3, title: "Избранное", path: "/fav" },
   ];
   return (
     <header className="head">
       <div className="head-wrapper container">
         <Tab
           className={"block-logo"}
-          elUrlNav={`${process.env.PUBLIC_URL}/`}
+          elUrlNav={"/"}
           text={
             <>
               <ReactSVG
@@ -37,7 +36,8 @@ const Menu = (props) => {
           </ul>
         </nav>
         <Tab
-          elUrlNav={`${process.env.PUBLIC_URL}/shopping`}
+          isActive={false}
+          elUrlNav={"/shopping"}
           text={
             <ReactSVG
               className={itemsCart.length ? "img-shop--red" : "img-shop"}
