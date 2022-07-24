@@ -53,8 +53,8 @@ const List = (props) => {
           path={`${process.env.PUBLIC_URL}/`}
           render={() => <GeneralList />}
         />
+
         <Route
-          exact
           path={`${process.env.PUBLIC_URL}/phone`}
           render={() => (
             <CardProductList
@@ -72,6 +72,7 @@ const List = (props) => {
             />
           )}
         />
+
         <Route
           path={`${process.env.PUBLIC_URL}/fav`}
           render={() => (
@@ -94,6 +95,7 @@ const List = (props) => {
             />
           )}
         />
+
         <Route
           path={`${process.env.PUBLIC_URL}/shopping`}
           render={() => (

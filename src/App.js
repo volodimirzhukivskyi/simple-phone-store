@@ -49,9 +49,9 @@ const App = () => {
         </div>
       )}
       {!isLoading && cards.length && (
-        <React.Fragment>
+        <>
           <List /> <Footer />
-        </React.Fragment>
+        </>
       )}
     </div>
   );

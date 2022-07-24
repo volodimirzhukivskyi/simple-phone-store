@@ -1,19 +1,18 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Tab = (props) => {
   const { text, elUrlNav, className } = props;
   return (
-    <NavLink
-      exact
+    <Link
       className={className}
-      activeStyle={{ borderBottom: "2px solid white" }}
+      // activeStyle={{ borderBottom: "2px solid white" }}
       to={elUrlNav}
-      isActive={() =>
-        window.location.pathname + window.location.hash === { elUrlNav }
-      }
+      // isActive={() =>
+      //   window.location.pathname + window.location.hash === { elUrlNav }
+      // }
     >
       {text}
-    </NavLink>
+    </Link>
   );
 };
 export default Tab;
