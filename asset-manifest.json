@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/css/main.3ab5a8cf.chunk.css",
-    "main.js": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/js/main.88580c93.chunk.js",
-    "main.js.map": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/js/main.88580c93.chunk.js.map",
-    "runtime-main.js": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/js/runtime-main.a5fe212d.js",
-    "runtime-main.js.map": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/js/runtime-main.a5fe212d.js.map",
-    "static/js/2.952b1b3b.chunk.js": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/js/2.952b1b3b.chunk.js",
-    "static/js/2.952b1b3b.chunk.js.map": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/js/2.952b1b3b.chunk.js.map",
+    "main.js": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/js/main.77e61a2e.chunk.js",
+    "main.js.map": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/js/main.77e61a2e.chunk.js.map",
+    "runtime-main.js": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/js/runtime-main.d6b33afd.js",
+    "runtime-main.js.map": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/js/runtime-main.d6b33afd.js.map",
+    "static/js/2.a612d003.chunk.js": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/js/2.a612d003.chunk.js",
+    "static/js/2.a612d003.chunk.js.map": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/js/2.a612d003.chunk.js.map",
     "index.html": "https://volodimirzhukivskyi.github.io/simple-phone-store/index.html",
     "static/css/main.3ab5a8cf.chunk.css.map": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/css/main.3ab5a8cf.chunk.css.map",
-    "static/js/2.952b1b3b.chunk.js.LICENSE.txt": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/js/2.952b1b3b.chunk.js.LICENSE.txt"
+    "static/js/2.a612d003.chunk.js.LICENSE.txt": "https://volodimirzhukivskyi.github.io/simple-phone-store/static/js/2.a612d003.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a5fe212d.js",
-    "static/js/2.952b1b3b.chunk.js",
+    "static/js/runtime-main.d6b33afd.js",
+    "static/js/2.a612d003.chunk.js",
     "static/css/main.3ab5a8cf.chunk.css",
-    "static/js/main.88580c93.chunk.js"
+    "static/js/main.77e61a2e.chunk.js"
   ]
 }
