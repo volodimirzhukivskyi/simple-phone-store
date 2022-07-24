@@ -8,7 +8,7 @@ import { store } from "./modules/ReduxApp/store";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Provider store={store}>
         <App />
       </Provider>

@@ -8,6 +8,9 @@ const Tab = (props) => {
       className={className}
       activeStyle={{ borderBottom: "2px solid white" }}
       to={elUrlNav}
+      isActive={() =>
+        window.location.pathname + window.location.hash === { elUrlNav }
+      }
     >
       {text}
     </NavLink>

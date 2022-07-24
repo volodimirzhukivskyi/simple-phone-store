@@ -48,7 +48,7 @@ const App = () => {
           </div>
         </div>
       )}
-      {!isLoading && cards.length && (
+      {cards.length && (
         <>
           <List /> <Footer />
         </>

@@ -16,7 +16,7 @@ const Footer = () => {
         {socials.map(({ id, icon, path }) => (
           <li key={id}>
             <a href={path} target="_blank" rel="noopener noreferrer">
-              <i className={`fab fa-solid fa-${icon}`} aria-hidden="true" />
+              <i className={`fab fa-${icon}`} />
             </a>
           </li>
         ))}
