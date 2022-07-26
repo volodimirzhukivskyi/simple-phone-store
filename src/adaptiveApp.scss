@@ -71,10 +71,7 @@
     width: 50px;
     margin-bottom: 5px;
   }
-  .block-products-text {
-    text-align: left;
-    max-width: 300px;
-  }
+
   .products-title {
     font-size: 20px;
   }
@@ -117,6 +114,7 @@
   .link-navigation {
     margin-left: 15px;
   }
+
   //////LOGO/////
 
 
@@ -128,6 +126,12 @@
 @media (max-width: 500px) {
   .hero-navigation__list {
     display: block;
+  }
+  .link-navigation{
+    padding: 5px 0;
+  }
+  .link-navigation::before{
+    bottom: 0px;
   }
   .color-block-container h2{
     display: none;

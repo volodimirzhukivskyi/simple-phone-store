@@ -8,10 +8,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <h2 className="footer-title">- свяжитесь с нами -</h2>
-      <p className="footer-text">
-        Оставляйте ваши контакты и мы с вами свяжемся . Call center работает
-        каждый день с 9:00-20:00. Ждем вас!!!{" "}
-      </p>
+
       <ul className="footer-wrapper--icon ">
         {socials.map(({ id, icon, path }) => (
           <li key={id}>
@@ -21,18 +18,7 @@ const Footer = () => {
           </li>
         ))}
       </ul>
-      <div className="footer-contact">
-        <p className="footer-concat__address ">
-          {" "}
-          Индустриальная ул. 14-05 город Киев /{" "}
-        </p>
-        <a href="tel: +38 (073) 102 70 43 " className="footer-contact__phone">
-          T. +38 (073) 102 70 43 /
-        </a>
-        <a href="mailto: mobi.life@email.com" className="footer-contact__email">
-          mobi.life@email.com
-        </a>
-      </div>
+      <div className="footer-contact">© All rights reserved, 2022</div>
     </footer>
   );
 };

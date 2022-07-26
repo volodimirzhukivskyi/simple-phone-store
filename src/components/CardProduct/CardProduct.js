@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactSVG } from "react-svg";
-
+import "./CardProduct.module.css";
 import PropTypes from "prop-types";
 import Star from "../starSVG/Star";
 import Button from "../Button/Button";
@@ -11,8 +11,8 @@ const CardProduct = (props) => {
     <div className="cardsWrapper">
       <img
         className="cardsWrapper__img"
-        onClick={() =>{}}
-        src={process.env.PUBLIC_URL+card.src}
+        onClick={() => {}}
+        src={process.env.PUBLIC_URL + card.src}
         alt={""}
       />
       <div className="elementsWrapper">
