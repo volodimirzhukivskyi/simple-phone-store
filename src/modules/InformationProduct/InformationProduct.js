@@ -37,7 +37,10 @@ const InformationProduct = () => {
     return imageElements;
   };
   return (
-    <>
+    <div>
+      <h2 className={"informationProduct-title"}>
+        Специальное предложение - <span>{name}</span>
+      </h2>
       <div className="block-products-card container">
         <div>
           <div className="block-pic-slider">
@@ -87,7 +90,6 @@ const InformationProduct = () => {
         <div className={"hero-block__form"}>
           <div className={"price-information"}>
             <div className="block-price">
-              <h1>{name}</h1>
               <p className={"price-number"}>
                 <b className={"price-text"}>ЦЕНА : </b>
                 {price}
@@ -97,7 +99,7 @@ const InformationProduct = () => {
           <FormShop card={showcaseSample} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default InformationProduct;

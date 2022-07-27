@@ -10,7 +10,14 @@
     width: 80px;
   }
   .block-pic-slider {
-    margin-bottom: 35px
+    margin-bottom: 35px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .block-pic{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
   }
   .text-order-block {
     font-size: 20px;
@@ -147,16 +154,8 @@
     padding: 10px;
   }
   ///////PRIORITY_PRODUCT//////
-  .block-pic-slider{
-    display: flex;
-    flex-direction: column;
-  }
-  .block-pic {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    margin-right: 20px;
-  }
+
+
   .podInformation__wrapper{
     flex-direction: column;
   }
