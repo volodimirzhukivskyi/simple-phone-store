@@ -8,7 +8,7 @@ const InformationProduct = () => {
     cards: store.reducerApp.cards,
   }));
   const showcaseSample = cards.find(
-    (product) => product.name === CURRENT_PRODUCT
+    (product) => product.name === CURRENT_PRODUCT,
   );
 
   const { color, txt, img, price, name } = showcaseSample;
@@ -31,7 +31,7 @@ const InformationProduct = () => {
           src={process.env.PUBLIC_URL + imageSrc}
           onClick={handleChange}
           alt="телефон"
-        />
+        />,
       );
     }
     return imageElements;
@@ -66,6 +66,7 @@ const InformationProduct = () => {
               <div className={"wrapperButtons"}>
                 {color.map((color, i) => (
                   <div
+                    key={color}
                     className={
                       activeColor === color
                         ? "wrapperButton active-button "

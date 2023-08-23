@@ -5,14 +5,13 @@ import {
   addFavProductsIds,
   addShoppingCart,
 } from "../ReduxApp/AppReducer/actionsApp";
-import React from "react";
+import React,{useCallback} from "react";
 import GeneralList from "../GeneralList/GeneralList";
 import { useDispatch, useSelector } from "react-redux";
 import Modal from "../../components/Modal/Modal";
 import Button from "../../components/Button/Button";
 import CardProductList from "../CardProductList/CardProductList";
 import FavShopList from "../FavShopList/FavShopList";
-
 const List = (props) => {
   const { cards, shoppingCart, favProductsIds, actionToConfirm } = useSelector(
     (store) => ({
@@ -20,7 +19,7 @@ const List = (props) => {
       shoppingCart: store.reducerApp.shoppingCart,
       favProductsIds: store.reducerApp.favProductsIds,
       actionToConfirm: store.reducerApp.actionToConfirm,
-    })
+    }),
   );
   const dispatch = useDispatch();
 
@@ -28,14 +27,14 @@ const List = (props) => {
     dispatch(addFavProductsIds(ids));
   };
 
-  const mapActions = (ids) => {
+  const mapActions = useCallback((ids) => {
     const found = favProductsIds.includes(ids);
     if (found) {
       onChangedFavProducts(favProductsIds.filter((n) => n !== ids));
     } else {
       onChangedFavProducts([...favProductsIds, ids]);
     }
-  };
+  }, []);
   const mapCarWithFavorites = (product) => {
     return {
       ...product,
@@ -71,7 +70,7 @@ const List = (props) => {
                   actionConfirm({
                     actionType: "add",
                     vendorCode: vendorCode,
-                  })
+                  }),
                 );
               }}
               splitValue={splitValue}
@@ -84,7 +83,7 @@ const List = (props) => {
             <FavShopList
               cards={cards
                 .filter((product) =>
-                  favProductsIds.includes(product.vendorCode)
+                  favProductsIds.includes(product.vendorCode),
                 )
                 .map(mapCarWithFavorites)}
               mapActions={mapActions}
@@ -93,7 +92,7 @@ const List = (props) => {
                   actionConfirm({
                     actionType: "add",
                     vendorCode: vendorCode,
-                  })
+                  }),
                 );
               }}
               splitValue={splitValue}
@@ -107,14 +106,14 @@ const List = (props) => {
               cards={cards
                 .filter((product) => {
                   return shoppingCart.find(
-                    (item) => product.vendorCode === item.vendorCode
+                    (item) => product.vendorCode === item.vendorCode,
                   );
                 })
                 .map((product) => {
                   return {
                     ...product,
                     count: shoppingCart.find(
-                      (item) => product.vendorCode === item.vendorCode
+                      (item) => product.vendorCode === item.vendorCode,
                     ).count,
                   };
                 })}
@@ -123,7 +122,7 @@ const List = (props) => {
                   actionConfirm({
                     actionType: "delete",
                     vendorCode: vendorCode,
-                  })
+                  }),
                 );
               }}
               splitValue={splitValue}

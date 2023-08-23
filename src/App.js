@@ -50,7 +50,7 @@ const App = () => {
       )}
       {cards.length && (
         <>
-          <List /> <Footer />
+        <List /> <Footer />
         </>
       )}
     </div>
