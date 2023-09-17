@@ -7,6 +7,7 @@ import "./adaptiveApp.scss";
 import loadUser from "./modules/ReduxApp/FetchUser";
 import List from "./modules/List/List";
 import Footer from "./modules/Footer/Footer";
+import Loader from "./components/Loader/Loader.jsx";
 const App = () => {
   const dispatch = useDispatch();
   const { isLoading, error, cards, shoppingCart } = useSelector((store) => ({
@@ -38,15 +39,7 @@ const App = () => {
       <Menu itemsCart={itemsCart} />
       {error && <div>{error}</div>}
       {isLoading && (
-        <div className="wrapperLoader">
-          <div className="loader">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
+      <Loader/>
       )}
       {cards.length && (
         <>
