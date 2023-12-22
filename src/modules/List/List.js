@@ -2,12 +2,14 @@ import { Route, Switch } from 'react-router-dom';
 import { deleteFromShopping, actionConfirm, addFavProductsIds, addShoppingCart } from '../ReduxApp/AppReducer/actionsApp';
 import React, { useCallback, lazy, Suspense } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Modal from '../../components/Modal/Modal';
+
 import Button from '../../components/Button/Button';
 import CardProductList from '../CardProductList/CardProductList';
 import Loader from '../../components/Loader/Loader';
-const FavShopList = lazy(() => import('../FavShopList/FavShopList'));
-const GeneralList = lazy(() => import('../GeneralList/GeneralList'));
+import FavShopList from '../FavShopList/FavShopList';
+import GeneralList from '../GeneralList/GeneralList';
+const Modal = lazy(() => import('../../components/Modal/Modal'));
+
 const List = (props) => {
   const { cards, shoppingCart, favProductsIds, actionToConfirm } = useSelector((store) => ({
     cards: store.reducerApp.cards,
@@ -39,110 +41,112 @@ const List = (props) => {
 
   return (
     <main className={'container'}>
-      <Suspense fallback={<Loader />}>
-        <Switch>
-          <Route exact path={'/'} render={() => <GeneralList />} />
-          <Route exact path={'/simple-phone-store/'} render={() => <GeneralList />} />
-          <Route path={`${process.env.PUBLIC_URL}/`} render={() => <GeneralList />} />
+      <Switch>
+        <Route exact path={'/'} render={() => <GeneralList />} />
+        <Route exact path={'/simple-phone-store/'} render={() => <GeneralList />} />
+        <Route path={`${process.env.PUBLIC_URL}/`} render={() => <GeneralList />} />
 
-          <Route
-            exact
-            path={'/phone'}
-            render={() => (
-              <CardProductList
-                cards={cards.map(mapCarWithFavorites)}
-                mapActions={mapActions}
-                onClickAddToCart={(vendorCode) => {
-                  dispatch(
-                    actionConfirm({
-                      actionType: 'add',
-                      vendorCode: vendorCode,
-                    })
-                  );
-                }}
-                splitValue={splitValue}
-              />
-            )}
-          />
-          <Route
-            path={'/fav'}
-            render={() => (
-              <FavShopList
-                cards={cards.filter((product) => favProductsIds.includes(product.vendorCode)).map(mapCarWithFavorites)}
-                mapActions={mapActions}
-                onClickAddToCart={(vendorCode) => {
-                  dispatch(
-                    actionConfirm({
-                      actionType: 'add',
-                      vendorCode: vendorCode,
-                    })
-                  );
-                }}
-                splitValue={splitValue}
-              />
-            )}
-          />
-          <Route
-            path={'/shopping'}
-            render={() => (
-              <FavShopList
-                cards={cards
-                  .filter((product) => {
-                    return shoppingCart.find((item) => product.vendorCode === item.vendorCode);
+        <Route
+          exact
+          path={'/phone'}
+          render={() => (
+            <CardProductList
+              cards={cards.map(mapCarWithFavorites)}
+              mapActions={mapActions}
+              onClickAddToCart={(vendorCode) => {
+                dispatch(
+                  actionConfirm({
+                    actionType: 'add',
+                    vendorCode: vendorCode,
                   })
-                  .map((product) => {
-                    return {
-                      ...product,
-                      count: shoppingCart.find((item) => product.vendorCode === item.vendorCode).count,
-                    };
-                  })}
-                onClickDelete={(vendorCode) => {
-                  dispatch(
-                    actionConfirm({
-                      actionType: 'delete',
-                      vendorCode: vendorCode,
-                    })
-                  );
-                }}
-                splitValue={splitValue}
-              />
-            )}
-          />
-        </Switch>
-      </Suspense>
+                );
+              }}
+              splitValue={splitValue}
+            />
+          )}
+        />
+        <Route
+          path={'/fav'}
+          render={() => (
+            <FavShopList
+              cards={cards.filter((product) => favProductsIds.includes(product.vendorCode)).map(mapCarWithFavorites)}
+              mapActions={mapActions}
+              onClickAddToCart={(vendorCode) => {
+                dispatch(
+                  actionConfirm({
+                    actionType: 'add',
+                    vendorCode: vendorCode,
+                  })
+                );
+              }}
+              splitValue={splitValue}
+            />
+          )}
+        />
+        <Route
+          path={'/shopping'}
+          render={() => (
+            <FavShopList
+              cards={cards
+                .filter((product) => {
+                  return shoppingCart.find((item) => product.vendorCode === item.vendorCode);
+                })
+                .map((product) => {
+                  return {
+                    ...product,
+                    count: shoppingCart.find((item) => product.vendorCode === item.vendorCode).count,
+                  };
+                })}
+              onClickDelete={(vendorCode) => {
+                dispatch(
+                  actionConfirm({
+                    actionType: 'delete',
+                    vendorCode: vendorCode,
+                  })
+                );
+              }}
+              splitValue={splitValue}
+            />
+          )}
+        />
+      </Switch>
 
       {actionToConfirm && (
-        <Modal
-          header=""
-          closeButton={true}
-          click={() => {
-            dispatch(actionConfirm(null));
-          }}
-          text={actionToConfirm.actionType === 'add' ? 'Добавить товар в корзину в корзину?' : 'Вы точно хотите удалить товар из корзины?'}
-          actions={
-            <div className="containerButton">
-              <Button
-                className="modalButtonOne"
-                backgroundColor={'#b3382c'}
-                text={actionToConfirm.actionType === 'add' ? 'Добавить' : 'Удалить'}
-                onClick={() => {
-                  actionToConfirm.actionType === 'add'
-                    ? dispatch(addShoppingCart(actionToConfirm.vendorCode))
-                    : dispatch(deleteFromShopping(actionToConfirm.vendorCode));
-                  dispatch(actionConfirm(null));
-                }}
-              />
-              <Button
-                className="modalButtonOne"
-                backgroundColor={'#b3382c'}
-                text={'Закрыть'}
-                onClick={() => {
-                  dispatch(actionConfirm(null));
-                }}
-              />
-            </div>
-          }
-        />
+        <Suspense fallback={<Loader />}>
+          <Modal
+            header=""
+            closeButton={true}
+            click={() => {
+              dispatch(actionConfirm(null));
+            }}
+            text={
+              actionToConfirm.actionType === 'add' ? 'Добавить товар в корзину в корзину?' : 'Вы точно хотите удалить товар из корзины?'
+            }
+            actions={
+              <div className="containerButton">
+                <Button
+                  className="modalButtonOne"
+                  backgroundColor={'#b3382c'}
+                  text={actionToConfirm.actionType === 'add' ? 'Добавить' : 'Удалить'}
+                  onClick={() => {
+                    actionToConfirm.actionType === 'add'
+                      ? dispatch(addShoppingCart(actionToConfirm.vendorCode))
+                      : dispatch(deleteFromShopping(actionToConfirm.vendorCode));
+                    dispatch(actionConfirm(null));
+                  }}
+                />
+                <Button
+                  className="modalButtonOne"
+                  backgroundColor={'#b3382c'}
+                  text={'Закрыть'}
+                  onClick={() => {
+                    dispatch(actionConfirm(null));
+                  }}
+                />
+              </div>
+            }
+          />
+        </Suspense>
       )}
     </main>
   );

@@ -1,23 +1,15 @@
-import React from "react";
-import FavShopCards from "../../components/FavShopCards/FavShopCards";
-import { changedCountItem } from "../ReduxApp/AppReducer/actionsApp";
-import {
-  addShopForm,
-  addShopModal,
-} from "../ReduxApp/ModalReducer/modalAction";
-import { useDispatch, useSelector } from "react-redux";
-import Modal from "../../components/Modal/Modal";
-import Button from "../../components/Button/Button";
-import FormShop from "../../components/FormShop/FormShop";
+import React, { Suspense, lazy } from 'react';
+import FavShopCards from '../../components/FavShopCards/FavShopCards';
+import { changedCountItem } from '../ReduxApp/AppReducer/actionsApp';
+import { addShopForm, addShopModal } from '../ReduxApp/ModalReducer/modalAction';
+import { useDispatch, useSelector } from 'react-redux';
 
+import Button from '../../components/Button/Button';
+import Loader from '../../components/Loader/Loader';
+const Modal = lazy(() => import('../../components/Modal/Modal'));
+const FormShop = lazy(() => import('../../components/FormShop/FormShop'));
 const FavShopList = (props) => {
-  const {
-    cards,
-    onClickDelete,
-    onClickAddToCart,
-    mapActions,
-    splitValue,
-  } = props;
+  const { cards, onClickDelete, onClickAddToCart, mapActions, splitValue } = props;
   const { shoppingCart, shopModal, shopForm } = useSelector((store) => ({
     cards: store.reducerApp.cards,
     shoppingCart: store.reducerApp.shoppingCart,
@@ -43,13 +35,9 @@ const FavShopList = (props) => {
 
   return (
     <div className="favContentWrapper">
-      <h1 className="titleHero">{mapActions ? "Избранное" : "Корзина"}</h1>
+      <h1 className="titleHero">{mapActions ? 'Избранное' : 'Корзина'}</h1>
       <div className="favCardsWrapper">
-        {cards && !cards.length && (
-          <div className="style-title">
-            Пока в{mapActions ? " Избранном" : " Корзине"} нет товаров...
-          </div>
-        )}
+        {cards && !cards.length && <div className="style-title">Пока в{mapActions ? ' Избранном' : ' Корзине'} нет товаров...</div>}
 
         {cards.map((card) => (
           <FavShopCards
@@ -64,53 +52,50 @@ const FavShopList = (props) => {
           />
         ))}
         {!mapActions && (
-          <div className={"total-price"}>
-            <p className={"total-price__text"}>
+          <div className={'total-price'}>
+            <p className={'total-price__text'}>
               К ОПЛАТЕ:
-              <span className={"total-price__el"}>
-                {cards.reduce(
-                  (accumulator, currentValue) =>
-                    accumulator + currentValue.count * +currentValue.price,
-                  0
-                )}
+              <span className={'total-price__el'}>
+                {cards.reduce((accumulator, currentValue) => accumulator + currentValue.count * +currentValue.price, 0)}
               </span>
             </p>
 
             <Button
-              className={cards.length ? "cardsWrapper__button" : "hide-block"}
-              style={{ background: "#cccccc" }}
+              className={cards.length ? 'cardsWrapper__button' : 'hide-block'}
+              style={{ background: '#cccccc' }}
               onClick={() => {
                 !mapActions && dispatch(addShopForm(true));
               }}
-              text={"Купить"}
+              text={'Купить'}
             />
           </div>
         )}
         {!mapActions && shopForm && (
-          <div className={"containerModal"}>
-            <FormShop
-              card={cards.map((card) => card)}
-              click={() => dispatch(addShopForm(false))}
-            />
-          </div>
+          <Suspense fallback={<Loader />}>
+            <div className={'containerModal'}>
+              <FormShop card={cards.map((card) => card)} click={() => dispatch(addShopForm(false))} />
+            </div>
+          </Suspense>
         )}
         {shopModal && (
-          <Modal
-            header="Спасибо за сотрудничество!!! "
-            closeButton={true}
-            click={() => dispatch(addShopModal(false))}
-            text="Ваш заказ принят на обробку.С вами свяжется менеджер"
-            actions={
-              <div className="containerButton">
-                <Button
-                  className="modalButtonOne"
-                  backgroundColor={"#b3382c"}
-                  text={"Закрыть"}
-                  onClick={() => dispatch(addShopModal(false))}
-                />
-              </div>
-            }
-          />
+          <Suspense fallback={<Loader />}>
+            <Modal
+              header="Спасибо за сотрудничество!!! "
+              closeButton={true}
+              click={() => dispatch(addShopModal(false))}
+              text="Ваш заказ принят на обробку.С вами свяжется менеджер"
+              actions={
+                <div className="containerButton">
+                  <Button
+                    className="modalButtonOne"
+                    backgroundColor={'#b3382c'}
+                    text={'Закрыть'}
+                    onClick={() => dispatch(addShopModal(false))}
+                  />
+                </div>
+              }
+            />{' '}
+          </Suspense>
         )}
       </div>
     </div>
